@@ -1,3 +1,14 @@
 #!/bin/bash
 
 sed -i 's|Arch|Antergos|g' /etc/issue /usr/share/factory/etc/issue
+
+cat << __EOF__ > /usr/lib/os-release
+NAME="Antergos Linux"
+PRETTY_NAME="Antergos Linux"
+ID=antergos
+ID_LIKE=archlinux
+ANSI_COLOR="0;36"
+HOME_URL="https://antergos.com/"
+SUPPORT_URL="https://forum.antergos.com/"
+BUG_REPORT_URL="https://github.com/antergos"
+__EOF__
