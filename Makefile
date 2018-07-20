@@ -11,7 +11,7 @@ install:
 	cp hooks/antergos-reboot.hook $(DESTDIR)/usr/share/libalpm/hooks
 
 	# Hook Scripts
-	install -Dm755 src/update-release-files $(DESTDIR)/usr/bin/update-release-files
+	install -Dm755 bin/update-release-files $(DESTDIR)/usr/bin/update-release-files
 
 uninstall:
 	# ALPM Hooks
