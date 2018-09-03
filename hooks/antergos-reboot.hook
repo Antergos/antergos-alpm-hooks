@@ -5,8 +5,20 @@ Operation = Remove
 Type = Package
 Target = linux*
 Target = systemd*
+Target = xorg-*
+Target = xf86-*
+Target = nvidia*
+Target = mesa
+Target = *wayland*
+Target = intel-ucode
 
 [Action]
-Description = Checking for kernel changes...
+Description = Checking core system packages
 When = PostTransaction
-Exec = /usr/bin/notify-send "Antergos Information" "Vital core packages have been changed.\nReboot is recommended"
+Depends = antergos-alerts
+Depends = bash
+Depends = python
+Depends = gettext
+Depends = libnotify
+Depends = python-termcolor
+Exec = /bin/bash -c 'RECOMMEND_REBOOT=1 /usr/bin/antergos-alerts'
