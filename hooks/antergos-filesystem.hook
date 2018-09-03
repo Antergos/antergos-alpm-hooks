@@ -3,6 +3,8 @@ Operation = Install
 Operation = Upgrade
 Type = Package
 Target = filesystem
+Target = systemd
+Target = lsb-release
 Target = antergos-alpm-hooks
 
 [Action]

@@ -12,3 +12,12 @@ HOME_URL="https://antergos.com/"
 SUPPORT_URL="https://forum.antergos.com/"
 BUG_REPORT_URL="https://github.com/antergos"
 __EOF__
+
+if [[ -f /etc/lsb-release ]]; then
+	cat << __EOF__ > /etc/lsb-release
+LSB_VERSION=1.4
+DISTRIB_ID=Antergos
+DISTRIB_RELEASE=rolling
+DISTRIB_DESCRIPTION="Antergos Linux"
+__EOF__
+fi
